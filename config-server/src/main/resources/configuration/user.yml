@@ -1,0 +1,28 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+server:
+  port: 7070
+
+spring:
+  application:
+    name: user
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/owcha_dev_db
+    username: owcha_user
+    password: owcha
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

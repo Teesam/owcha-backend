@@ -1,0 +1,19 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: discovery
+  import:
+    config: optional
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8765/eureka/
+
+

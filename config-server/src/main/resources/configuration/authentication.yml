@@ -1,0 +1,38 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+server:
+  port: 1122
+
+spring:
+  application:
+    name: authentication
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/owcha_dev_db
+    username: auth_user
+    password: auth_user
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: auth
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
+    schemas: auth
+    locations: classpath:db/migration
+
