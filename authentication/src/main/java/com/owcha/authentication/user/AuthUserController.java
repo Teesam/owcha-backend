@@ -12,8 +12,14 @@ public class AuthUserController {
         this.service = service;
     }
 
+//    @PostMapping("/createUser")
+//    public String registerUser(AuthUserDto user){
+//        return service.createUser(user);
+//    }
+
     @PostMapping("/createUser")
-    public String registerUser(AuthUserDto user){
-        return service.createUser(user);
+    public String registerUser(){
+        System.out.println("hit controller");
+        return service.createUser();
     }
 }
