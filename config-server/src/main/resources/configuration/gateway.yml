@@ -31,6 +31,12 @@ spring:
                 - Path=/api/v1/user/**
               filters:
                 - StripPrefix=3
+            - id: authentication
+              uri: lb://authentication
+              predicates:
+                - Path=/api/v1/auth/**
+              filters:
+                - StripPrefix=3
 
 management:
   endpoints:

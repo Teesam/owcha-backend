@@ -15,9 +15,14 @@ public class AuthUserService {
         this.repository = repository;
     }
 
-    public String createUser(AuthUserDto user){
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        repository.save(user);
+//    public String createUser(AuthUserDto user){
+//        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+//        repository.save(user);
+//        return "User succesfully saved";
+//    }
+
+    public String createUser(){
+        System.out.println("Hit service");
         return "User succesfully saved";
     }
 }
