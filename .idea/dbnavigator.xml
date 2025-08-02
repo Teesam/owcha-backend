@@ -33,7 +33,7 @@
     <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/authentication/src/main/resources/db/migration/v1__create_auth_tables.sql" connection-id="3a835766-054d-425a-bb17-dccbf693b1a7" session-id="MAIN" current-schema="owcha_dev_db" />
+    <mapping file-url="file://$PROJECT_DIR$/authentication/src/main/resources/db/migration/v1__init_auth_schema.sql" connection-id="3a835766-054d-425a-bb17-dccbf693b1a7" session-id="MAIN" current-schema="auth" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
